@@ -9,10 +9,14 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-
+	
+	@IBOutlet weak var blackView: UIView!
+	@IBOutlet weak var photoScrollView: UIScrollView!
 	@IBOutlet weak var bigImageContainer: UIImageView!
 	
 	var bigImage: UIImage!
+	var bigImageStartingY: CGFloat!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +24,51 @@ class PhotoViewController: UIViewController {
         // Do any additional setup after loading the view.
 		
 		bigImageContainer.image = bigImage
+		println(bigImageContainer.center.y)
+//		blackView.alpha = 0.4
+
+		
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+	
+	@IBAction func didPan(sender: UIPanGestureRecognizer) {
+
+		
+		var translation = sender.translationInView(view)
+		
+		if (sender.state == UIGestureRecognizerState.Began){
+			println("panning began")
+			bigImageStartingY = bigImageContainer.center.y
+		}
+			
+		else if (sender.state == UIGestureRecognizerState.Changed) {
+
+			bigImageContainer.center.y = bigImageStartingY + translation.y
+//			println(self.bigImageContainer.center.y)
+			blackView.alpha = 1 - (abs(translation.y)/100)
+			println(self.photoScrollView.alpha)
+			
+		
+		}
+			
+		else if (sender.state == UIGestureRecognizerState.Ended) {
+			
+			if abs(translation.y) > 60 {
+				dismissViewControllerAnimated(true, completion: nil)
+			}
+			else {
+				UIView.animateWithDuration(0.4, animations: { () -> Void in
+					self.bigImageContainer.center.y = self.bigImageStartingY
+				})
+			}
+			
+		}
+	}
     
 	@IBAction func didPressDoneButton(sender: AnyObject) {
 		dismissViewControllerAnimated(true, completion: nil)

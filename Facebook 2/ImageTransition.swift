@@ -88,9 +88,9 @@ class ImageTransition: BaseTransition {
 
 		fromViewController.view.alpha = 1
 		UIView.animateWithDuration(duration, animations: {
-			println("before animating: \(movingImageView.frame)")
+//			println("before animating: \(movingImageView.frame)")
 			movingImageView.frame = self.frame
-			println("after animating: \(movingImageView.frame)")
+//			println("after animating: \(movingImageView.frame)")
 			fromViewController.view.alpha = 0
 			}) { (finished: Bool) -> Void in
 				self.finish()
