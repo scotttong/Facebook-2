@@ -14,14 +14,7 @@ class ImageTransition: BaseTransition {
 	
 	override func presentTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
 		
-		/*
-		var tabViewController = fromViewController as UITabBarController
-		var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
-		var feedViewController = feedNavViewController.topViewController as FeedViewController
-		feedViewController.selectedImageView.hidden = true
-		var photoViewController = toViewController as PhotoViewController
-		photoViewController.bigImageContainer.hidden = true
-		*/
+		// not completely sure what's going on here, but Stacey Adams mentioned XCode is looking for a UINavigationController, when our feedViewController is actually a UITabBarController. This block of code converts it / casts it for us somehow.
 		
 		var tabViewController = fromViewController as UITabBarController
 		var feedNavController = tabViewController.viewControllers![0] as UINavigationController
@@ -67,7 +60,8 @@ class ImageTransition: BaseTransition {
 	
 	override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
 		
-		
+		// not completely sure what's going on here, but Stacey Adams mentioned XCode is looking for a UINavigationController, when our feedViewController is actually a UITabBarController. This block of code converts it / casts it for us somehow.
+
 		var tabViewController = toViewController as UITabBarController
 		var feedNavViewController = tabViewController.viewControllers![0] as UINavigationController
 		var feedViewController = feedNavViewController.topViewController as FeedViewController
