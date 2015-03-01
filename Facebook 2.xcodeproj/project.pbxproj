@@ -17,6 +17,7 @@
 		195BEB061AA32CB800E2E831 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEB051AA32CB800E2E831 /* PhotoViewController.swift */; };
 		195BEB091AA32CD300E2E831 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEB071AA32CD300E2E831 /* BaseTransition.swift */; };
 		195BEB0A1AA32CD300E2E831 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195BEB081AA32CD300E2E831 /* FadeTransition.swift */; };
+		1974B1991AA337E000FD408D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1974B1981AA337E000FD408D /* ImageTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		195BEB051AA32CB800E2E831 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		195BEB071AA32CD300E2E831 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		195BEB081AA32CD300E2E831 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		1974B1981AA337E000FD408D /* ImageTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			children = (
 				195BEB071AA32CD300E2E831 /* BaseTransition.swift */,
 				195BEB081AA32CD300E2E831 /* FadeTransition.swift */,
+				1974B1981AA337E000FD408D /* ImageTransition.swift */,
 			);
 			name = Transitions;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				195BEAE61AA32B9000E2E831 /* ViewController.swift in Sources */,
+				1974B1991AA337E000FD408D /* ImageTransition.swift in Sources */,
 				195BEB091AA32CD300E2E831 /* BaseTransition.swift in Sources */,
 				195BEB061AA32CB800E2E831 /* PhotoViewController.swift in Sources */,
 				195BEB041AA32CA900E2E831 /* FeedViewController.swift in Sources */,
@@ -429,6 +433,7 @@
 				195BEAFF1AA32B9000E2E831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		195BEB001AA32B9000E2E831 /* Build configuration list for PBXNativeTarget "Facebook 2Tests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +442,7 @@
 				195BEB021AA32B9000E2E831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

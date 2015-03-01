@@ -10,10 +10,16 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+	@IBOutlet weak var bigImageContainer: UIImageView!
+	
+	var bigImage: UIImage!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		
+		bigImageContainer.image = bigImage
     }
 
     override func didReceiveMemoryWarning() {
