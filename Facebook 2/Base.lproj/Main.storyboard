@@ -163,6 +163,8 @@
                     <connections>
                         <outlet property="bigImageContainer" destination="Rq5-1u-ehQ" id="ak0-a6-rtd"/>
                         <outlet property="blackView" destination="vGT-G6-wPW" id="1iI-ic-e2c"/>
+                        <outlet property="doneButton" destination="7tg-BX-59P" id="ksK-oS-bgh"/>
+                        <outlet property="photoActions" destination="WE3-sV-STP" id="IYI-0T-xgQ"/>
                         <outlet property="photoScrollView" destination="R59-ks-hF6" id="aOu-Aa-Geg"/>
                     </connections>
                 </viewController>

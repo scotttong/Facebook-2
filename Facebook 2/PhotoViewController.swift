@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 	
+	@IBOutlet weak var photoActions: UIImageView!
+	@IBOutlet weak var doneButton: UIImageView!
 	@IBOutlet weak var blackView: UIView!
 	@IBOutlet weak var photoScrollView: UIScrollView!
 	@IBOutlet weak var bigImageContainer: UIImageView!
@@ -51,6 +53,8 @@ class PhotoViewController: UIViewController {
 			bigImageContainer.center.y = bigImageStartingY + translation.y
 //			println(self.bigImageContainer.center.y)
 			blackView.alpha = 1 - (abs(translation.y)/100)
+			doneButton.alpha = 0
+			photoActions.alpha = 0
 			println(self.photoScrollView.alpha)
 			
 		
@@ -64,6 +68,9 @@ class PhotoViewController: UIViewController {
 			else {
 				UIView.animateWithDuration(0.4, animations: { () -> Void in
 					self.bigImageContainer.center.y = self.bigImageStartingY
+					self.blackView.alpha = 1
+					self.doneButton.alpha = 1
+					self.photoActions.alpha = 1
 				})
 			}
 			
